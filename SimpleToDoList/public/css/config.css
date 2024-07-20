@@ -1,0 +1,18 @@
+:root {
+    /* color variables */
+    --text-color: #9E78CF;
+    --secunday-text-color: #c7abec77;
+    --background-color: #0D0714;
+    --button-color: #9E78CF;
+    --done-task-text-color: #78CFB0;
+    --white-color: #FFFFFF;
+    --border-color: #3E1671;
+    --default-gap: 1rem;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    color: var(--white-color);
+}

@@ -1,0 +1,12 @@
+.tasksDoneContainer {
+    margin-top: 2rem;
+}
+
+.container-title {
+    min-width: 350px;
+    max-width: 525px;
+    margin: 0 auto;
+    margin-bottom: var(--default-gap);
+    color: var(--white-color);
+    font-size: 1rem;
+}

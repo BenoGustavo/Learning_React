@@ -1,0 +1,38 @@
+.searchBarContainer {
+    width: 100%;
+    margin-top: 3.5rem;
+}
+
+.searchBarContainer .content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.searchBarContainer .content input {
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    flex: 0.4;
+    max-width: 490px;
+    padding-left: var(--default-gap);
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.searchBarContainer button {
+    background-color: var(--button-color);
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: linear all 0.3s;
+}
+
+.searchBarContainer button:hover {
+    background-color: #624c96;
+}
+
+.searchBarContainer button:active {
+    transform: scale(0.90);
+}

@@ -1,0 +1,55 @@
+.task-body {
+    background-color: #15101C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 534px;
+    margin: 0 auto;
+    margin-bottom: var(--default-gap);
+}
+
+.task-body .task-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.task-body h3 {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.task-body p {
+    font-size: 14px;
+    color: var(--secunday-text-color);
+}
+
+.task-body .task-buttons {
+    display: flex;
+    gap: var(--default-gap);
+}
+
+.task-body .task-buttons button {
+    background-color: transparent;
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-body .task-buttons button img {
+    transition: filter linear 0.2s;
+}
+
+.task-body .task-buttons button img:hover {
+    filter: invert(1);
+}
+
+.done h3 {
+    text-decoration: line-through;
+}

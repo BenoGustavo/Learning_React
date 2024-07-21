@@ -1,0 +1,56 @@
+.wetherInfoContainer {
+    margin-top: var(--default-gap);
+}
+
+.wrapper {
+    margin: 0 auto;
+    background-color: #842ff3ea;
+    width: 350px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.849);
+}
+
+.city {
+    font-weight: 700;
+}
+
+.date {
+    margin: var(--default-gap) 0;
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    width: 350px;
+}
+
+.temperature span {
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.temperature img {
+    width: 150px;
+}
+
+.wetherInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--default-gap);
+}
+
+.windAndHumidityContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.description {
+    align-self: flex-start;
+    margin-bottom: 9px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}

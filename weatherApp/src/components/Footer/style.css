@@ -1,0 +1,28 @@
+.footerContainer ul {
+    display: flex;
+    gap: 4rem;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footerContainer ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: ease-in-out 0.3s;
+    font-size: 0.8rem;
+}
+
+.footerContainer ul li a:hover {
+    color: var(--purple-blue);
+    filter: opacity(0.2);
+}
+
+.footerContainer ul img {
+    width: 35px;
+    height: 35px;
+}

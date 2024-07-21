@@ -36,7 +36,7 @@ export class RegionSelect extends React.Component<RegionSelectProps, RegionSelec
             <section className="FormContainer">
                 <form>
                     <div className="state">
-                        <label htmlFor="region">Region:</label>
+                        <label htmlFor="region">Estados:</label>
                         <select id="region" name="region" value={this.props.region} onChange={this.handleRegionChange}>
                             {Object.keys(this.regionJson).map((region) => (
                                 <option key={region} value={region}>
@@ -46,7 +46,7 @@ export class RegionSelect extends React.Component<RegionSelectProps, RegionSelec
                         </select>
                     </div>
                     <div className="city">
-                        <label htmlFor="citie">Cities:</label>
+                        <label htmlFor="citie">Cidades:</label>
                         <select id="citie" name="citie" onChange={this.handleCityChange}>
                             {this.regionJson[this.props.region].map((city) => (
                                 <option key={city} value={city}>

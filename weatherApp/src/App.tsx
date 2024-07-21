@@ -1,6 +1,7 @@
 import React from 'react'
 import { RegionSelect } from './components/RegionSelectForm/RegionSelect'
 import { WeatherInfo } from './components/WetherInfo/WetherInfo'
+import { Footer } from './components/Footer/Footer'
 import './style.css'
 
 type AppState = {
@@ -37,6 +38,7 @@ export class App extends React.Component<{}, AppState> {
           />
           <WeatherInfo region={this.state.region} city={this.state.city} />
         </main>
+        <Footer />
       </>
     )
   }

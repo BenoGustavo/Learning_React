@@ -24,7 +24,11 @@ export class AddTaskForm extends React.Component<AddTaskFormProps, AddTaskFormSt
             <form className="searchBarContainer">
                 <div className="content">
                     <input type="text" maxLength={32} value={this.state.taskName} onChange={(e) => this.setState({ taskName: e.target.value })} placeholder={this.props.placeholdertext} />
-                    <button onClick={(e) => { this.state.taskService.createTask(e, this.state.taskName) }}><img src={PlusSign} alt="Plus Sign" /></button>
+                    <button onClick={(e) => {
+                        e.preventDefault(); // Prevent form submission
+                        this.state.taskService.createTask(e, this.state.taskName);
+                        this.setState({ taskName: '' }); // Clear the input field
+                    }}><img src={PlusSign} alt="Plus Sign" /></button>
                 </div>
             </form>
         );

@@ -1,6 +1,10 @@
+body {
+    overflow-y: hidden;
+}
+
 .mainContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100dvh;
+    height: calc(100vh - 70px);
 }

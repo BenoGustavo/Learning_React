@@ -3,7 +3,6 @@
     gap: 4rem;
     width: 100%;
     justify-content: center;
-    margin-bottom: 1rem;
 }
 
 .footerContainer ul li a {
@@ -13,13 +12,18 @@
     text-decoration: none;
     color: black;
     font-weight: 500;
+    filter: opacity(0.2);
     transition: ease-in-out 0.3s;
     font-size: 0.8rem;
 }
 
+.footerContainer ul li a img {
+    filter: grayscale(100);
+}
+
 .footerContainer ul li a:hover {
     color: var(--purple-blue);
-    filter: opacity(0.2);
+    filter: opacity(1);
 }
 
 .footerContainer ul img {

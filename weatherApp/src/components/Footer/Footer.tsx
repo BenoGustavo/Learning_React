@@ -1,7 +1,7 @@
 import React from "react";
 import githubIcon from "../../assets/img/icons/github.png"
 import linkedinIcon from "../../assets/img/icons/linkedin.png"
-import repositoryIcon from "../../assets/img/icons/repo.png"
+import repositoryIcon from "../../assets/img/icons/repov2.png"
 
 import "./style.css"
 

@@ -41,7 +41,7 @@ export class WeatherInfo extends React.Component<WeatherInfoProps, WeatherInfoSt
     }
 
     fetchData = async () => {
-        const city = loadLocalStorage("city");
+        const city = loadLocalStorage("city") ?? this.props.city;
 
         try {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apiKey}&lang=pt_br&units=metric`);

@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { getBackgroundBasedOnCode } from "../../utils/importAllBgImages";
+import { loadLocalStorage } from "../../utils/localStorageController"
 
 type WeatherInfoProps = {
     city: string;
@@ -40,7 +41,8 @@ export class WeatherInfo extends React.Component<WeatherInfoProps, WeatherInfoSt
     }
 
     fetchData = async () => {
-        const { city } = this.props;
+        const city = loadLocalStorage("city");
+
         try {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apiKey}&lang=pt_br&units=metric`);
             if (!response.ok) {

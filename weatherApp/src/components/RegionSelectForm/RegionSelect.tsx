@@ -1,6 +1,7 @@
 import React from "react";
 import braziliamStates from "../../assets/json/states.json"
 import "./style.css"
+import { saveOnLocalStorage, loadLocalStorage } from "../../utils/localStorageController"
 
 type RegionSelectProps = {
     region: string;
@@ -8,27 +9,35 @@ type RegionSelectProps = {
     onCityChange: (city: string) => void;
 };
 
-type RegionSelectState = {
-    region: string;
-    city: string;
-};
-
-export class RegionSelect extends React.Component<RegionSelectProps, RegionSelectState> {
+export class RegionSelect extends React.Component<RegionSelectProps> {
     regionJson: { [key: string]: string[] };
 
     constructor(props: RegionSelectProps) {
         super(props);
         this.regionJson = braziliamStates;
+
+        const regionLocalStorage = loadLocalStorage('region')
+        const cityLocalStorage = loadLocalStorage('city')
+
+        if (regionLocalStorage && cityLocalStorage) {
+            this.props.onRegionChange(regionLocalStorage);
+            this.props.onCityChange(cityLocalStorage);
+        }
     }
 
     handleRegionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const region = event.target.value;
         this.props.onRegionChange(region);
         this.props.onCityChange(this.regionJson[region][0]);
+
+        saveOnLocalStorage('region', region);
+        saveOnLocalStorage('city', this.regionJson[region][0]);
     };
 
     handleCityChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         this.props.onCityChange(event.target.value);
+
+        saveOnLocalStorage('city', event.target.value);
     };
 
     render() {

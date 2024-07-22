@@ -55,8 +55,6 @@ export class WeatherInfo extends React.Component<WeatherInfoProps, WeatherInfoSt
             let bgUrl = getBackgroundBasedOnCode(data.weather[0].icon)
 
             document.body.style.backgroundImage = `url(${bgUrl})`;
-            document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundRepeat = "no-repeat";
 
         } catch (error) {
             this.setState({ error, loading: false });

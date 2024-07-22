@@ -1,5 +1,7 @@
 body {
     overflow-y: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .mainContainer {

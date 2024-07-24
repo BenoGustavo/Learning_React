@@ -1,0 +1,20 @@
+:root {
+    --lighter-primary-color: #71627a;
+    --primary-color: #5b4965;
+    --dark-primary-color: #3d354b;
+    --darket-primary-color: #2e293a;
+    --white-color: #f9f9f9;
+
+
+    --default-gap: 1rem;
+    --default-radius: 0.5rem;
+    --default-transition: all 0.3s ease-in-out;
+    --default-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--lighter-primary-color);
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    color: var(--white-color);
+}
